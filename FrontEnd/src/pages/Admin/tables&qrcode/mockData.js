@@ -11,32 +11,30 @@ export const getStatCardsData = (counts) => [
     label: 'TOTAL TABLES',
     value: counts?.totalTables ?? 0,
     borderClass: '',
+    hoverClass: 'hover:border-[#3B4E6B] hover:shadow-xl hover:shadow-white/5 hover:-translate-y-1 hover:bg-[#161D2B] cursor-pointer',
     dotColor: null,
-    textColor: 'text-[#FFFFFF]'
+    textColor: 'text-[#FFFFFF]',
+    statusFilter: 'All'
   },
   {
     id: 'available',
     label: 'AVAILABLE',
     value: counts?.availableTables ?? 0,
     borderClass: 'border-l-4 border-l-[#10B981]',
+    hoverClass: 'hover:border-l-[#10B981] hover:border-[#10B981]/50 hover:shadow-xl hover:shadow-[#10B981]/20 hover:-translate-y-1 hover:bg-[#141F2B] cursor-pointer',
     dotColor: 'bg-[#10B981]',
-    textColor: 'text-[#10B981]'
+    textColor: 'text-[#10B981]',
+    statusFilter: 'Available'
   },
   {
     id: 'occupied',
     label: 'OCCUPIED',
     value: counts?.occupiedTables ?? 0,
     borderClass: 'border-l-4 border-l-[#F59E0B]',
+    hoverClass: 'hover:border-l-[#F59E0B] hover:border-[#F59E0B]/50 hover:shadow-xl hover:shadow-[#F59E0B]/20 hover:-translate-y-1 hover:bg-[#1C1A14] cursor-pointer',
     dotColor: 'bg-[#F59E0B]',
-    textColor: 'text-[#F59E0B]'
-  },
-  {
-    id: 'bill_requested',
-    label: 'BILL REQUESTED',
-    value: counts?.billRequestedTables ?? 0,
-    borderClass: 'border-l-4 border-l-[#EF4444]',
-    dotColor: 'bg-[#EF4444]',
-    textColor: 'text-[#EF4444]'
+    textColor: 'text-[#F59E0B]',
+    statusFilter: 'Occupied'
   }
 ];
 

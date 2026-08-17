@@ -1,10 +1,10 @@
 import React from 'react';
 import { TableSection } from '../pages/Admin/tables&qrcode/TableSection';
 
-export const Tables = () => {
+export const Tables = ({ onOpenOrderForm }) => {
     return (
         <>
-            <TableSection />
+            <TableSection onOpenOrderForm={onOpenOrderForm} />
         </>
     );
 };
