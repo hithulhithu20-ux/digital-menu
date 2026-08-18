@@ -4,7 +4,7 @@ import Login from './pages/Login'
 
 
 function App() {
-console.log("as");
+
 
   return <Login />
 }
