@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tables } from '../../components/Tables&QRCode';
+import { Tables } from '../../components/Admin/Tables&QRCode';
 
 export const Dashboard = ({ onOpenOrderForm }) => {
   return (

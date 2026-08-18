@@ -5,7 +5,7 @@ import { AddTableForm } from './AddTableForm';
 import { FilterList } from './FilterList';
 import { tablesMockData, areasList, getStatCardsData } from './mockData';
 
-export const TableSection = ({ onOpenOrderForm }) => {
+export const TableSection = () => {
     const [tablesList, setTablesList] = useState(tablesMockData);
     const [selectedArea, setSelectedArea] = useState('All Areas');
     const [selectedStatus, setSelectedStatus] = useState('All');
@@ -246,11 +246,10 @@ export const TableSection = ({ onOpenOrderForm }) => {
                         <button
                             disabled={currentPage === 1}
                             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                            className={`px-3.5 py-2 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 ${
-                                currentPage === 1
-                                    ? 'border-[#1F2736] text-[#404957] cursor-not-allowed bg-[#131822]/50'
-                                    : 'border-[#1F2736] text-white hover:border-[#FF6200] hover:bg-[#FF6200]/15'
-                            }`}
+                            className={`px-3.5 py-2 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 ${currentPage === 1
+                                ? 'border-[#1F2736] text-[#404957] cursor-not-allowed bg-[#131822]/50'
+                                : 'border-[#1F2736] text-white hover:border-[#FF6200] hover:bg-[#FF6200]/15'
+                                }`}
                         >
                             <span>←</span>
                             <span>Prev</span>
@@ -261,11 +260,10 @@ export const TableSection = ({ onOpenOrderForm }) => {
                                 <button
                                     key={pageNo}
                                     onClick={() => setCurrentPage(pageNo)}
-                                    className={`w-9 h-9 rounded-lg font-bold text-xs transition-all cursor-pointer ${
-                                        currentPage === pageNo
-                                            ? 'bg-[#FF6200] text-white shadow-md shadow-[#FF6200]/30'
-                                            : 'bg-[#131822] border border-[#1F2736] text-[#8A929B] hover:text-white hover:border-[#2E3A50]'
-                                    }`}
+                                    className={`w-9 h-9 rounded-lg font-bold text-xs transition-all cursor-pointer ${currentPage === pageNo
+                                        ? 'bg-[#FF6200] text-white shadow-md shadow-[#FF6200]/30'
+                                        : 'bg-[#131822] border border-[#1F2736] text-[#8A929B] hover:text-white hover:border-[#2E3A50]'
+                                        }`}
                                 >
                                     {pageNo}
                                 </button>
@@ -275,11 +273,10 @@ export const TableSection = ({ onOpenOrderForm }) => {
                         <button
                             disabled={currentPage === totalPages || totalPages === 0}
                             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                            className={`px-3.5 py-2 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 ${
-                                currentPage === totalPages || totalPages === 0
-                                    ? 'border-[#1F2736] text-[#404957] cursor-not-allowed bg-[#131822]/50'
-                                    : 'border-[#1F2736] text-white hover:border-[#FF6200] hover:bg-[#FF6200]/15'
-                            }`}
+                            className={`px-3.5 py-2 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 ${currentPage === totalPages || totalPages === 0
+                                ? 'border-[#1F2736] text-[#404957] cursor-not-allowed bg-[#131822]/50'
+                                : 'border-[#1F2736] text-white hover:border-[#FF6200] hover:bg-[#FF6200]/15'
+                                }`}
                         >
                             <span>Next</span>
                             <span>→</span>
