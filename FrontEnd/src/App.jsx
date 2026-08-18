@@ -8,12 +8,19 @@ function App() {
 
 
   return (
-
-    <>
-      <Tables />
-    </>
-  )
+    <div className="w-full min-h-screen bg-[#0B0E14]">
+      {activeTableOrder ? (
+        <FoodOrderForm
+          tableNo={activeTableOrder}
+          onBackToAdmin={handleBackToAdmin}
+        />
+      ) : (
+        <>
+          <Dashboard onOpenOrderForm={handleOpenOrderForm} />
+        </>
+      )}
+    </div>
+  );
 }
-
 
 export default App;
