@@ -3,7 +3,7 @@ import { Card } from './TablesCard';
 import { QRCodeCard } from './QRCodeCard';
 import { AddTableForm } from './AddTableForm';
 import { FilterList } from './FilterList';
-import { tablesMockData, areasList, getStatCardsData } from './mockData';
+import { tablesMockData, areasList, getStatCardsData } from '../../MockData/mockData';
 
 export const TableSection = () => {
     const [tablesList, setTablesList] = useState(tablesMockData);
