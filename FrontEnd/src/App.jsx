@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
-import Login from './pages/Login'
-
+import React from 'react';
+import Tables from './pages/Admin/tables&qrcode/Tables&QRCode';
 
 function App() {
-
-
-  return <Login />
+  return (
+    <>
+      <Tables />
+    </>
+  );
 }
 
 export default App;
