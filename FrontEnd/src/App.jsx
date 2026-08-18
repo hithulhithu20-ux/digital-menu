@@ -1,11 +1,7 @@
-import Products from './pages/Admin/Products'
+import Login from './pages/Login'
 
 function App() {
-  return (
-    <>
-      <Products />
-    </>
-  )
+  return <Login />
 }
 
 export default App
