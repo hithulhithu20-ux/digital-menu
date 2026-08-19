@@ -106,7 +106,7 @@ export const TableSection = () => {
                             letterSpacing: '0px',
                             color: '#FFFFFF'
                         }}
-                        className="bg-[#FF6200] hover:bg-[#E05600] active:scale-[0.98] transition-all px-5 py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-[#FF6200]/20 cursor-pointer self-start sm:self-auto min-w-[140px]"
+                        className="bg-[#FF6200] hover:bg-[#E05600] active:scale-[0.98] transition-all px-5 py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-[#FF6200]/20 cursor-pointer self-start sm:self-auto min-w-35"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -125,7 +125,7 @@ export const TableSection = () => {
                             <div
                                 key={card.id}
                                 onClick={() => setSelectedStatus(card.statusFilter)}
-                                className={`bg-[#131822] border border-[#1F2736] ${card.borderClass} ${card.hoverClass} transition-all duration-300 rounded-2xl p-6 sm:p-7 min-h-[145px] sm:min-h-[165px] flex flex-col justify-between shadow-md ${isActiveFilter ? 'ring-2 ring-[#FF6200] scale-[1.01]' : ''
+                                className={`bg-[#131822] border border-[#1F2736] ${card.borderClass} ${card.hoverClass} transition-all duration-300 rounded-2xl p-6 sm:p-7 min-h-36.25 sm:min-h-41.25 flex flex-col justify-between shadow-md ${isActiveFilter ? 'ring-2 ring-[#FF6200] scale-[1.01]' : ''
                                     }`}
                             >
                                 <div className="flex items-center gap-2.5">
@@ -146,7 +146,7 @@ export const TableSection = () => {
                                         {card.label}
                                     </span>
                                 </div>
-                                <div className={`font-['Inter'] font-bold text-[38px] sm:text-[44px] leading-[48px] ${card.textColor} mt-4`}>
+                                <div className={`font-['Inter'] font-bold text-[38px] sm:text-[44px] leading-12 ${card.textColor} mt-4`}>
                                     {card.value}
                                 </div>
                             </div>

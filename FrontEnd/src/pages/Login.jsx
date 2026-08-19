@@ -73,7 +73,7 @@ export default function Login() {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-[240px] text-[1.05rem] leading-[1.35] text-white/80">
+          <div className="relative z-10 max-w-60 text-[1.05rem] leading-[1.35] text-white/80">
             <span className="block text-[#f59e0b] font-semibold">Restaurant</span>
             <span className="block">operations,</span>
             <span className="block">reimagined.</span>
@@ -84,7 +84,7 @@ export default function Login() {
 
         <div className="relative flex w-full flex-1 items-center justify-center bg-[#040b14] px-5 py-8 sm:px-8 lg:px-10">
           <div className="absolute left-0 top-0 h-full w-px border border-l border-gray-600" />
-          <div className="w-full max-w-[500px]">
+          <div className="w-full max-w-125">
             <div className="mb-8 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3 text-white/90">
                 <div className="flex h-9 w-9 items-center justify-center rounded-md border border-[#f59e0b]/70 bg-[#0a0e14]">
