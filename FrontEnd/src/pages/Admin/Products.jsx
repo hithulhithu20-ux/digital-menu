@@ -187,20 +187,8 @@ export default function Products() {
 
           {/* Right: Status Filter + Sliders Icon */}
           <div className="flex items-center gap-3">
-            {/* Search Bar */}
-            <div className="relative hidden md:block">
-              <Search
-                size={14}
-                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500"
-              />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search menu..."
-                className="h-10 pl-9 pr-4 w-48 rounded-xl bg-[#10141d] border border-[#1e2330] text-xs text-zinc-300 placeholder-zinc-500 outline-none focus:border-zinc-700 transition-all"
-              />
-            </div>
+            
+            
 
             {/* Status Dropdown Pill */}
             <div className="relative">
