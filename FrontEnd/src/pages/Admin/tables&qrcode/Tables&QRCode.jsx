@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableSection } from '../../../components/Admin/TableSection';
+import { TableSection } from '../../../components/admin/TableSection';
 
 export const Tables = () => {
     return (
