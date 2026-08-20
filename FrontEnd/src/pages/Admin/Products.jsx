@@ -5,8 +5,8 @@ import {
   SlidersHorizontal,
   ChevronDown,
 } from "lucide-react";
-import ProductCard from "../../components/products/ProductCard";
-import AddProducts from "../../components/products/Addproducts";
+import ProductCard from "../../components/admin/ProductCard";
+import AddProducts from "../../components/admin/Addproducts";
 
 /* ── Initial Products matching the screenshot ─────────────────────── */
 const INITIAL_PRODUCTS = [
