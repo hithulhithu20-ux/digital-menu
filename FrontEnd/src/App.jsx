@@ -9,6 +9,9 @@ const Tables = lazy(() => import('./pages/Admin/tables&qrcode/Tables&QRCode'));
 const Products = lazy(() => import('./pages/Admin/Products'));
 const Login = lazy(() => import('./pages/Login'));
 const Waiters = lazy(() => import('./pages/Admin/Waiters'))
+const Menu = lazy(() => import('./pages/User/Menu'))
+const Checkout = lazy(() => import('./pages/User/Checkout'))
+const Order = lazy(() => import('./pages/User/Order'))
 
 // Loading spinner fallback for lazy components
 const PageLoading = () => (
@@ -56,6 +59,12 @@ function App() {
           <Route path="reports" element={<PagePlaceholder title="Reports" />} />
           <Route path="settings" element={<PagePlaceholder title="Settings" />} />
         </Route>
+
+        {/* User Menu Route */}
+        <Route path='/landing' element={<LandingPage />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/orders" element={<Order />} />
 
         {/* Initial route and fallback redirects */}
         <Route path="/" element={<Navigate to="/login" replace />} />

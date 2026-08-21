@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
       {/* Mobile-sized container */}
@@ -15,11 +17,11 @@ const LandingPage = () => {
 
         {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col px-6 py-8">
-          
+
           {/* Logo */}
           <div className="flex flex-col items-center mt-14">
             <div className="flex items-center gap-2">
-              
+
               {/* QR Icon */}
               <div className="text-orange-400">
                 <svg
@@ -61,7 +63,7 @@ const LandingPage = () => {
 
             {/* Table */}
             <div className="mt-5 flex items-center gap-3 rounded-full border border-gray-700 bg-black/40 px-6 py-2.5">
-              
+
               {/* Table icon */}
               <svg
                 width="16"
@@ -86,6 +88,7 @@ const LandingPage = () => {
           {/* Explore Button */}
           <div className="mb-16">
             <button
+              onClick={() => navigate("/menu")}
               className="
                 w-full
                 h-[58px]
