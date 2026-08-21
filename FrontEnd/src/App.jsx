@@ -1,11 +1,15 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import WelcomePage from './pages/User/LandingPage';
+import LandingPage from './pages/User/LandingPage';
 
 // Lazy loading admin layout and page components
 const AdminLayout = lazy(() => import('./layouts/AdminLayout'));
 const Tables = lazy(() => import('./pages/Admin/tables&qrcode/Tables&QRCode'));
 const Products = lazy(() => import('./pages/Admin/Products'));
 const Login = lazy(() => import('./pages/Login'));
+const Waiters = lazy(() => import('./pages/Admin/Waiters'))
+const Orders = lazy(() => import('./pages/Admin/Orders'));
 
 // Loading spinner fallback for lazy components
 const PageLoading = () => (
@@ -45,10 +49,10 @@ function App() {
           <Route path="tables" element={<Tables />} />
           <Route path="products" element={<Products />} />
           <Route path="overview" element={<PagePlaceholder title="Overview" />} />
-          <Route path="orders" element={<PagePlaceholder title="Orders" />} />
+          <Route path="orders" element={<Orders />} />
           <Route path="offers" element={<PagePlaceholder title="Offers" />} />
           <Route path="specials" element={<PagePlaceholder title="Today's Specials" />} />
-          <Route path="waiters" element={<PagePlaceholder title="Waiters" />} />
+          <Route path="waiters" element={<Waiters />} />
           <Route path="help-requests" element={<PagePlaceholder title="Help Requests" />} />
           <Route path="reports" element={<PagePlaceholder title="Reports" />} />
           <Route path="settings" element={<PagePlaceholder title="Settings" />} />
@@ -59,6 +63,7 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Suspense>
+    // <LandingPage/>
   );
 }
 
